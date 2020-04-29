@@ -10,7 +10,7 @@ class Formatter {
     const words = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
     let array = string.split(" ")
     let result = []
-    result.push(this.capitalize(array[0]) + " ")
+    result.push(this.capitalize(array[0]))
     for (let i = 1; i < array.length; i++) {
       if (words.includes(array[i])) {
         result.push(array[i])
