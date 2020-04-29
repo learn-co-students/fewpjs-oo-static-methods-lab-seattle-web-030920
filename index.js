@@ -8,19 +8,11 @@ class Formatter {
   }
 
   static titleize(string){
+    let exceptions = [ 'the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
     let array=string.split(' ')
     console.log(array)
    let newString= array.map(word => {
-      if (word!= 'the' &&
-        word!= 'a' &&
-        word!='an' &&
-        word!='but' &&
-        word!='of' &&
-        word!='and' &&
-        word!='for' &&
-        word!='at' &&
-        word!= 'by' &&
-        word!= 'from'){
+      if (!exceptions.includes(word)){
       return word[0].toUpperCase() + word.slice(1)
         }
         else {
@@ -32,5 +24,3 @@ class Formatter {
 
   }
 }
-
-// capitalizes all words in a sentence except the, a, an, but, of, and, for, at, by, and from; and always capitalizes the first word.
